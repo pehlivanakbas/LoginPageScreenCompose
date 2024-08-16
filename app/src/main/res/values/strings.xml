@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Cards and Campaigns </string>
+    <string name="welcome_en">Hoşgeldiniz</string>
+    <string name="text_enter">Giriş yapmak için lütfen bilgilerinizi giriniz. </string>
+    <string name="forget_password">Parolanızı hatırlamıyorsanız   </string>
+    <string name="clickable_text">tıklayınız</string>
+    <string name="tr">TR</string>
+    <string name="en">EN</string>
+    <string name="changeAvatar">Avatarı Değiştir</string>
+    <string name="phone">Telefon</string>
+    <string name="password">Parola</string>
+    <string name="login">Giriş</string>
+    <string name="signup">Kayıt Ol</string>
+
+</resources>

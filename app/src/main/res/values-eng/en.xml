@@ -1,0 +1,14 @@
+<resources>
+    <string name="welcome_en">Welcome</string>
+    <string name="text_enter">Please Enter Your Information for Login </string>
+    <string name="forget_password">Do you forget your password   </string>
+    <string name="clickable_text">Click here</string>
+    <string name="tr">TR</string>
+    <string name="en">EN</string>
+    <string name="changeAvatar">Change Avatar</string>
+    <string name="login">Login</string>
+    <string name="signup">SignUp</string>
+    <string name="phone">Phone</string>
+    <string name="password">Password</string>
+
+</resources>
