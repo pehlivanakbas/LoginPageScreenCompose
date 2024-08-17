@@ -10,6 +10,7 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -75,14 +76,12 @@ class MainActivity : ComponentActivity() {
         setContent {
 
             BootcampBasicPageDesignHomeworkTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     EntrancePage()
-
                 }
             }
         }
     }
-}
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -128,12 +127,38 @@ fun EntrancePage(darkTheme: Boolean = isSystemInDarkTheme()) {
             verticalArrangement = Arrangement.SpaceEvenly,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            GetImageFlag(image = painterResource(id = R.drawable.tr_flag) , contentDescription = "Language_flag_icon", size = screenWidth/10 )
-            GetImage(image =painterResource(id = R.drawable.welcomeimage) , contentDescription ="account_image" , size = screenWidth/3)
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .align(Alignment.CenterHorizontally),
+                Arrangement.End
+            ) {
 
-            UnderlinedText(fontsize = screenWidth, text =  stringResource(id = R.string.changeAvatar))
+                GetImageFlag(
+                    image = painterResource(id = R.drawable.tr_flag),
+                    contentDescription = "Language_flag_icon",
+                    size = screenWidth / 10
+                )
+                Spacer(modifier = Modifier.padding(5.dp))
+                GetImageFlag(
+                    image = painterResource(id = R.drawable.uk_flag),
+                    contentDescription = "Language_flag_icon",
+                    size = screenWidth / 10
+                )
 
-            GetTexts(fontsize =(screenWidth), text = stringResource(id = R.string.text_enter))
+            }
+            GetImage(
+                image = painterResource(id = R.drawable.welcomeimage),
+                contentDescription = "account_image",
+                size = screenWidth / 3
+            )
+
+            UnderlinedText(
+                fontsize = screenWidth,
+                text = stringResource(id = R.string.changeAvatar)
+            )
+
+            GetTexts(fontsize = (screenWidth), text = stringResource(id = R.string.text_enter))
 
             TextFields(value = phoneNumber, labelText = stringResource(id = R.string.phone))
             TextFields(value = password, labelText = stringResource(id = R.string.password))
@@ -147,8 +172,14 @@ fun EntrancePage(darkTheme: Boolean = isSystemInDarkTheme()) {
 
             ) {
 
-                GetTexts(fontsize =screenWidth, text = stringResource(id = R.string.forget_password))
-                UnderlinedText(fontsize = screenWidth, text = stringResource(id = R.string.clickable_text) )
+                GetTexts(
+                    fontsize = screenWidth,
+                    text = stringResource(id = R.string.forget_password)
+                )
+                UnderlinedText(
+                    fontsize = screenWidth,
+                    text = stringResource(id = R.string.clickable_text)
+                )
             }
 
         }
@@ -157,8 +188,7 @@ fun EntrancePage(darkTheme: Boolean = isSystemInDarkTheme()) {
 }
 
 
-
-@Preview(showBackground = true, locale = "eng" )
+@Preview(showBackground = true, locale = "eng")
 @Composable
 fun EntrancePagePreview() {
     BootcampBasicPageDesignHomeworkTheme {
